@@ -1,0 +1,74 @@
+/* Bootstrap v3.3.6 */
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css';
+
+/* Fonts */
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic';
+
+form .error { 
+    color: #ff0000; 
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+body {
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 4.0em;
+}
+
+p {
+  font-size: 1.1em;
+  margin-bottom: 1.5em;
+}
+
+.bg-primary {
+  background-color: #3999CA;
+}
+
+.bg-gray-dark {
+  background-color: #353849;
+}
+
+.bg-gray-darker {
+  background-color: #2E3141;
+}
+
+.bg-gray-light {
+  background-color: #E6E8EE;
+}
+
+.text-light {
+  color: #E6E8EE;
+}

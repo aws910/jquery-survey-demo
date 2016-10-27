@@ -1,0 +1,75 @@
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+</head>
+<body>
+<header><div class="container bg-gray-dark text-center text-light">
+  <div class="col-sm-3"><h4>THE Survey</h4></div>
+  <div class="col-sm-3"><button id="reset" class="btn btn-default">Reset</button></div>
+  <div class="col-sm-3"><button id="addquestion" class="btn btn-primary">Add Question</button></div>
+  <div class="col-sm-3"><button id="takesurvey" class="btn btn-success">Take Survey</button></div>
+</div></header>
+<div class="container text-light bg-gray-light"><ul class="list-group" id="question-list">
+  <li class="list-group-item list-group-item-info" id="no-questions">No questions yet... click "Add Question" to get started!</li>
+</ul></div>
+<div id="aqdt" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>What type of question?</h2>
+    </div>
+    <div class="modal-body">
+      <button id="createRadio" class="btn btn-primary btn-block btn-lg">Radio button group &#10095;</button>
+      <button id="createCheckbox" class="btn btn-primary btn-block btn-lg">Checkbox group &#10095;</button>
+      <button id="createDropdown" class="btn btn-primary btn-block btn-lg">Dropdown &#10095;</button>
+      <button id="createFreetext" class="btn btn-primary btn-block btn-lg">Free-text field &#10095;</button>
+    </div>
+  </div>
+</div>
+
+<div id="create-radio-dialog" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Create radio group</h2>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label for="radio-headline">Question text:</label>
+        <input type="text" class="form-control" id="radio-headline" placeholder="Headline (required)">
+        <hr>
+        <label for="radio-option-1">Option 1 text:</label>
+        <input type="text" class="form-control" id="radio-option-1" placeholder="Option 1 (required)">
+        <label for="radio-option-2">Option 2 text:</label>
+        <input type="text" class="form-control" id="radio-option-2" placeholder="Option 2 (required)">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button id="radio-finish" class="btn btn-success">Create</button>
+    </div>
+  </div>
+</div>
+
+
+<div id="create-freetext-dialog" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Create free-text field</h2>
+    </div>
+    <form action="" id="form-create-freetext">
+    <div class="modal-body">
+      <div class="form-group">
+        <label for="ftheadline">Question text:</label>
+        <input type="text" class="form-control" name="ftheadline" id="ftheadline" placeholder="Headline (required)">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button id="freetext-finish" class="btn btn-success" type="submit">Create</button>
+    </div>
+    </form>
+  </div>
+</div>
+<script src='app.js'></script>
+</body>
+</html>
