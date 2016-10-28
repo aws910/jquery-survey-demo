@@ -9,7 +9,7 @@ var Question = function(headlineText) {
   this.headlineText = headlineText;
 };
 
-//remove this smoke-test
+//possibly remove this smoke-test in the future
 Question.prototype.getHeadline = function() {
   console.log(this.headlineText);
 };
@@ -65,7 +65,6 @@ $("#createRadio").click(function() {
 });
 
 $("#radio-finish").click(function() {
-  //TODO: validation
   var newRadio = new RadioQuestion($("#radio-headline").val());
   thisSurvey.AddQuestion(newRadio);
   addQuestionToList(newRadio);
@@ -83,7 +82,6 @@ $("#createFreetext").click(function() {
   //TODO: validation
 
 $("#form-create-freetext").submit(function(e){
-  e.preventDefault();
   var newFreetext = new FreetextQuestion($("#ftheadline").val());
   thisSurvey.AddQuestion(newFreetext);
   addQuestionToList(newFreetext);
@@ -104,6 +102,7 @@ $("#takesurvey").click(function() {
    
 });
 
+//allow user to click outside of the modal to close it
 window.onclick = function(event) {
   var modals = ["aqdt", "create-freetext-dialog", "create-radio-dialog", "create-dropdown-dialog", "create-checkbox-dialog"];
   if (modals.indexOf(event.target.id) >= 0) {
@@ -111,6 +110,7 @@ window.onclick = function(event) {
   }
 }
 
+//why doesn't this validation work?
 $("#form-create-freetext").validate({ 
   rules: { 
     ftheadline: { required: true, minlength: 2}
